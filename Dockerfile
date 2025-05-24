@@ -15,6 +15,8 @@ RUN curl -LO https://github.com/VOICEVOX/voicevox_engine/releases/download/0.23.
     ls -lh voicevox_engine-linux-cpu-x64-0.23.0.7z.* && \
     7z x voicevox_engine-linux-cpu-x64-0.23.0.7z.001 -o/opt/voicevox_engine
 
+RUN 7z x voicevox_engine-linux-cpu-x64-0.23.0.7z.001 -o/opt/voicevox_engine && \
+    ls -lR /opt/voicevox_engine
 
 # 必要なら pip で Flask などもインストールできる
 # RUN pip install flask
